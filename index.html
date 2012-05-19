@@ -26,15 +26,11 @@
       </header>
       <section>
         <h2>What</h2>
+        <p>Display on a certain number of characters of text, and trigger the display of the full text with an automatically appended "Read More" link.</p>
+        <p>Customizable: number of characters, ... ellipses text, and "read more" link</p>
 
-<p>Display on a certain number of characters of text, and trigger the display of the full text with an automatically appended "Read More" link.</p>
-
-<p>Customizable: number of characters, ... ellipses text, and "read more" link</p>
-
-<h2>How</h2>
-
-<p>Import the script, then on an element that has just child text, apply a selector that you can find with jQuery and call the plugin</p>
-
+        <h2>How</h2>
+        <p>Import the script, then on an element that has just child text, apply a selector that you can find with jQuery and call the plugin</p>
 <pre><code>&lt;div class="nachooooo"&gt;
   Mucho text here
 &lt;/div&gt;
@@ -42,8 +38,17 @@
 &lt;script&gt;
   $('.nachooooo').readmore();
 &lt;/script&gt;
-
 </code></pre>
+
+        <h2>Demo</h2>
+        <div class="nachooooo">
+          Pancetta bresaola capicola drumstick brisket. Meatloaf sirloin chuck, sausage venison jowl filet mignon. Pork belly sirloin leberkas short loin. Pancetta drumstick sirloin rump tri-tip. Filet mignon salami short loin venison t-bone, turkey leberkas shank ribeye tongue beef ham hock pancetta frankfurter. Ham jerky corned beef, tail pork ham hock flank shank sirloin turducken prosciutto.
+
+          Venison rump pork ham hock. Shank meatball rump, beef ribs drumstick ribeye brisket tail boudin. Rump pork loin swine capicola boudin. Leberkas short ribs frankfurter short loin pastrami jerky, speck pig chicken. Meatball tenderloin drumstick, shoulder strip steak pastrami short loin. Turducken prosciutto tenderloin, flank rump chicken meatloaf short ribs sausage bresaola cow hamburger capicola turkey. Shank t-bone beef ribs shankle sirloin, bresaola prosciutto ham hock flank meatball speck tenderloin.
+
+          Ground round swine bacon, bresaola fatback turkey beef brisket leberkas flank. Pork chop rump spare ribs, sirloin shoulder pork loin shank shankle venison t-bone fatback short ribs salami. Sirloin ground round pancetta pork belly, jerky capicola beef brisket prosciutto andouille strip steak t-bone boudin. Pork ribeye pork loin shankle chuck beef ribs pancetta, corned beef jowl pork chop. Shankle tri-tip kielbasa ribeye prosciutto, ham pig chicken tongue. Pork brisket pastrami biltong turkey, salami tri-tip speck frankfurter.
+        </div>
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/jtsnake">jtsnake</a></p>
@@ -51,6 +56,12 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/jtsnake/jquery-readmore/master/readmore/jquery.readmore.js"></script>
+    <script>
+      $(function () {
+        $('.nachooooo').readmore();
+      });
+    </script>
   </body>
 </html>
