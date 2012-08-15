@@ -13,7 +13,9 @@
       more_link: '<a class="readm-more">Read&nbsp;More</a>',
       more_clzz: 'readm-more',
       ellipse_clzz: 'readm-continue',
-      hidden_clzz: 'readm-hidden'
+      hidden_clzz: 'readm-hidden',
+      roll_down_link: '<a class="roll-down">Roll down</a>',
+      roll_down_clzz: 'roll-down',
     };
 
     var opts =  $.extend({}, defaults, settings);
@@ -32,6 +34,14 @@
         $(this).hide();
         elem.find('.' + opts.ellipse_clzz).hide();
         elem.find('.' + opts.hidden_clzz).animate({'opacity' : 'toggle'},1000);
+        
+        elem.append(opts.roll_down_link);
+        elem.find('.' + opts.roll_down_clzz).click( function () {
+        	elem.find('.' + opts.roll_down_clzz).hide();
+        	elem.find('.' + opts.hidden_clzz).hide();
+        	abridge(elem);
+        	linkage(elem);
+        });
       });
     }
 
@@ -45,7 +55,7 @@
         '</span>';
       elem.html(shown + hidden);
     }
-    
+
     return this;
   };
 })(jQuery);
